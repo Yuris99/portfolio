@@ -4,6 +4,12 @@ function setLanguage(lang) {
     });
 }
 
+function toggleLanguage() {
+    const currentLang = document.querySelector('[data-lang-en]').textContent === 'About' ? 'en' : 'ko';
+    const newLang = currentLang === 'en' ? 'ko' : 'en';
+    setLanguage(newLang);
+}
+
 function toggleTheme() {
     const themeStyle = document.getElementById('theme-style');
     if (themeStyle.getAttribute('href') === 'dark-mode.css') {
@@ -11,9 +17,22 @@ function toggleTheme() {
     } else {
         themeStyle.setAttribute('href', 'dark-mode.css');
     }
+    updateThemeIcon();
+}
+
+function updateThemeIcon() {
+    const themeStyle = document.getElementById('theme-style');
+    const themeIcon = document.getElementById('theme-toggle').querySelector('i');
+    if (themeStyle.getAttribute('href') === 'dark-mode.css') {
+        themeIcon.classList.remove('fa-sun');
+        themeIcon.classList.add('fa-moon');
+    } else {
+        themeIcon.classList.remove('fa-moon');
+        themeIcon.classList.add('fa-sun');
+    }
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    // 기본 언어 설정
     setLanguage('en');
+    updateThemeIcon();
 });
