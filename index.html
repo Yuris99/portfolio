@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1 data-lang-en="My Portfolio" data-lang-ko="내 포트폴리오">My Portfolio</h1>
+        <nav>
+            <ul>
+                <li><a href="#about" data-lang-en="About" data-lang-ko="소개">About</a></li>
+                <li><a href="#projects" data-lang-en="Projects" data-lang-ko="프로젝트">Projects</a></li>
+                <li><a href="#contact" data-lang-en="Contact" data-lang-ko="연락처">Contact</a></li>
+            </ul>
+        </nav>
+        <button onclick="setLanguage('en')">English</button>
+        <button onclick="setLanguage('ko')">한글</button>
+    </header>
+    
+    <section id="about">
+        <h2 data-lang-en="About Me" data-lang-ko="소개">About Me</h2>
+        <p data-lang-en="This is a brief introduction about myself." data-lang-ko="여기 나에 대한 간단한 소개가 있습니다.">This is a brief introduction about myself.</p>
+    </section>
+    
+    <section id="projects">
+        <h2 data-lang-en="Projects" data-lang-ko="프로젝트">Projects</h2>
+        <div class="project">
+            <h3 data-lang-en="Project 1" data-lang-ko="프로젝트 1">Project 1</h3>
+            <p data-lang-en="Description of project 1." data-lang-ko="프로젝트 1에 대한 설명입니다.">Description of project 1.</p>
+        </div>
+        <div class="project">
+            <h3 data-lang-en="Project 2" data-lang-ko="프로젝트 2">Project 2</h3>
+            <p data-lang-en="Description of project 2." data-lang-ko="프로젝트 2에 대한 설명입니다.">Description of project 2.</p>
+        </div>
+    </section>
+    
+    <section id="contact">
+        <h2 data-lang-en="Contact" data-lang-ko="연락처">Contact</h2>
+        <p data-lang-en="You can contact me at" data-lang-ko="여기로 연락하세요">You can contact me at <a href="mailto:your.email@example.com">your.email@example.com</a></p>
+    </section>
+    
+    <footer>
+        <p data-lang-en="&copy; 2024 My Portfolio" data-lang-ko="&copy; 2024 내 포트폴리오">&copy; 2024 My Portfolio</p>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
