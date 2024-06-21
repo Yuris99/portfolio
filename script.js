@@ -1,21 +1,9 @@
-function setLanguage(lang) {
-    document.querySelectorAll('[data-lang-en]').forEach(element => {
-        element.textContent = element.getAttribute(`data-lang-${lang}`);
-    });
-}
-
-function toggleLanguage() {
-    const currentLang = document.querySelector('[data-lang-en]').textContent === 'About' ? 'en' : 'ko';
-    const newLang = currentLang === 'en' ? 'ko' : 'en';
-    setLanguage(newLang);
-}
-
 function toggleTheme() {
     const themeStyle = document.getElementById('theme-style');
-    if (themeStyle.getAttribute('href') === 'dark-mode.css') {
+    if (themeStyle.getAttribute('href') === 'styles.css') {
         themeStyle.setAttribute('href', 'light-mode.css');
     } else {
-        themeStyle.setAttribute('href', 'dark-mode.css');
+        themeStyle.setAttribute('href', 'styles.css');
     }
     updateThemeIcon();
 }
@@ -23,7 +11,7 @@ function toggleTheme() {
 function updateThemeIcon() {
     const themeStyle = document.getElementById('theme-style');
     const themeIcon = document.getElementById('theme-toggle').querySelector('i');
-    if (themeStyle.getAttribute('href') === 'dark-mode.css') {
+    if (themeStyle.getAttribute('href') === 'styles.css') {
         themeIcon.classList.remove('fa-sun');
         themeIcon.classList.add('fa-moon');
     } else {
@@ -32,7 +20,22 @@ function updateThemeIcon() {
     }
 }
 
+function revealElements() {
+    const reveals = document.querySelectorAll('.hidden');
+    reveals.forEach((el) => {
+        const windowHeight = window.innerHeight;
+        const elementTop = el.getBoundingClientRect().top;
+        const elementVisible = 100;
+        if (elementTop < windowHeight - elementVisible) {
+            el.classList.add('visible');
+            el.classList.remove('hidden');
+        }
+    });
+}
+
+window.addEventListener('scroll', revealElements);
+
 document.addEventListener('DOMContentLoaded', () => {
-    setLanguage('en');
     updateThemeIcon();
+    revealElements();
 });

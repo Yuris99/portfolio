@@ -15,12 +15,17 @@ header {
     align-items: center;
 }
 
+nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
 nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
-    justify-content: flex-start;
 }
 
 nav ul li {
@@ -37,19 +42,20 @@ nav ul li a {
     align-items: center;
 }
 
-button {
+.header-buttons button {
     background-color: transparent;
     border: none;
     color: #000000;
     cursor: pointer;
     margin-left: 10px;
+    font-size: 1em;
 }
 
-button i {
+.header-buttons button i {
     font-size: 1.5em;
 }
 
-button:hover {
+.header-buttons button:hover {
     color: #555555;
 }
 
@@ -70,6 +76,43 @@ footer {
     bottom: 0;
 }
 
+.timeline-filters {
+    margin: 20px 0;
+}
+
+.timeline-filters button {
+    background-color: #ddd;
+    border: none;
+    color: #000;
+    padding: 10px 20px;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.timeline-filters button:hover {
+    background-color: #bbb;
+}
+
+.timeline {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.timeline-item {
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin: 10px 0;
+    width: 80%;
+    border-radius: 5px;
+    text-align: left;
+}
+
+.timeline-item .date {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
 /* 반응형 디자인 */
 @media (max-width: 768px) {
     header {
@@ -88,6 +131,8 @@ footer {
 
     .header-buttons {
         margin-top: 10px;
+        justify-content: flex-end;
+        width: 100%;
     }
 
     footer {
@@ -97,7 +142,11 @@ footer {
 }
 
 @media (max-width: 480px) {
-    button i {
+    .header-buttons button {
+        font-size: 0.8em;
+    }
+
+    .header-buttons button i {
         font-size: 1.2em;
     }
 

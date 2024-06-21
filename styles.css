@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #121212;
@@ -13,13 +13,10 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    position: fixed;
     width: 100%;
+    top: 0;
+    z-index: 1000;
 }
 
 nav ul {
@@ -27,6 +24,7 @@ nav ul {
     padding: 0;
     margin: 0;
     display: flex;
+    align-items: center;
 }
 
 nav ul li {
@@ -36,6 +34,11 @@ nav ul li {
 nav ul li a {
     color: #ffffff;
     text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #f39c12;
 }
 
 .header-buttons {
@@ -57,11 +60,47 @@ nav ul li a {
 }
 
 .header-buttons button:hover {
-    color: #cccccc;
+    color: #f39c12;
 }
 
 section {
-    padding: 40px 20px;
+    padding: 100px 20px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#welcome {
+    background-color: #1f1f1f;
+    color: #ffffff;
+    text-align: center;
+}
+
+.welcome-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.welcome-link {
+    color: #f39c12;
+    text-decoration: none;
+    font-size: 1.2em;
+    margin: 10px;
+    transition: color 0.3s;
+}
+
+.welcome-link:hover {
+    color: #ffffff;
+}
+
+.content {
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .project {
@@ -72,26 +111,10 @@ footer {
     background-color: #1f1f1f;
     color: #ffffff;
     padding: 20px 0;
-    position: fixed;
-    width: 100%;
+    text-align: center;
+    position: relative;
     bottom: 0;
-}
-
-.timeline-filters {
-    margin: 20px 0;
-}
-
-.timeline-filters button {
-    background-color: #333;
-    border: none;
-    color: #fff;
-    padding: 10px 20px;
-    margin: 0 5px;
-    cursor: pointer;
-}
-
-.timeline-filters button:hover {
-    background-color: #555;
+    width: 100%;
 }
 
 .timeline {
@@ -114,6 +137,17 @@ footer {
     margin-bottom: 5px;
 }
 
+.hidden {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 /* 반응형 디자인 */
 @media (max-width: 768px) {
     header {
@@ -133,11 +167,6 @@ footer {
     .header-buttons {
         margin-top: 10px;
         justify-content: flex-end;
-        width: 100%;
-    }
-
-    footer {
-        position: static;
         width: 100%;
     }
 }
