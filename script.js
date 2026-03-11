@@ -92,16 +92,33 @@ document.addEventListener('DOMContentLoaded', () => {
     const langToggleBtn = document.getElementById('langToggle');
     if (langToggleBtn) {
         langToggleBtn.addEventListener('click', (e) => {
-            const isEnglish = window.location.pathname.includes('index_en.html');
+            const isEnglish = window.location.pathname.includes('/en/');
             const target = e.target;
             
+            // Getting the base path without '/en/' or 'index.html'
+            let basePath = window.location.pathname;
+            
+            if (isEnglish) {
+                basePath = basePath.replace('/en/index.html', '/').replace('/en/', '/');
+            } else {
+                // If not english, we need to append /en/
+                // Handle cases where it might be ending in /index.html or just /
+                if (basePath.endsWith('index.html')) {
+                    basePath = basePath.replace('index.html', 'en/');
+                } else if (!basePath.endsWith('/')) {
+                    basePath += '/en/';
+                } else {
+                    basePath += 'en/';
+                }
+            }
+
             if (target.classList.contains('ko') && isEnglish) {
-                window.location.href = 'index.html';
+                window.location.href = basePath;
             } else if (target.classList.contains('en') && !isEnglish) {
-                window.location.href = 'index_en.html';
+                window.location.href = basePath;
             } else if (target.tagName.toLowerCase() === 'button' || target.classList.contains('divider')) {
                 // If clicking the button itself or the slash
-                window.location.href = isEnglish ? 'index.html' : 'index_en.html';
+                window.location.href = basePath;
             }
         });
     }
