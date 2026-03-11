@@ -16,10 +16,10 @@
         <div class="nav-container">
             <div class="logo">&lt;Yuris /&gt;</div>
             <div class="nav-links">
-                <a href="#about">About</a>
-                <a href="#projects">Projects</a>
-                <a href="#skills">Skills</a>
-                <a href="#contact">Contact</a>
+                <a href="#about">소개</a>
+                <a href="#projects">프로젝트</a>
+                <a href="#skills">기술 및 역량</a>
+                <a href="#contact">연락처</a>
                 <button class="lang-toggle" id="langToggle">
                     <span class="ko active">KO</span>
                     <span class="divider">/</span>
@@ -129,31 +129,22 @@
         <section class="section-competencies bg-white">
             <div class="container">
                 <p class="section-subtitle">Core Competencies</p>
-                <h2 class="section-heading">Core Competencies ⚡</h2>
-                <div class="competencies-grid">
-                    <div class="comp-card large-card">
-                        <img alt="Kernel Development" src="https://readdy.ai/api/search-image?query=abstract%20soft%20light%20purple%20lavender%20gradient%20technology%20circuit%20board%20patterns%20minimal%20clean%20background%20representing%20operating%20system%20kernel%20architecture%20with%20geometric%20shapes%20and%20flowing%20data%20streams%20modern%20tech%20aesthetic%20pastel%20tones&width=800&height=450&seq=comp1light&orientation=landscape">
-                        <div class="comp-overlay"></div>
-                        <div class="comp-content">
-                            <h3>Kernel Development</h3>
-                            <p>Deep expertise in Linux kernel internals, device drivers, and system call implementation</p>
-                        </div>
+                <h2 class="section-heading">핵심 역량 ⚡</h2>
+                <div class="competencies-grid-text">
+                    <div class="comp-text-card border-left-primary">
+                        <div class="icon-box-large"><i class="ri-cpu-line"></i></div>
+                        <h3>커널 개발 및 분석</h3>
+                        <p>리눅스 커널 내부 구조, 시스템 콜 흐름, 그리고 저수준 인터페이스 설계에 대한 이해도 보유</p>
                     </div>
-                    <div class="comp-card">
-                        <img alt="Memory Management" src="https://readdy.ai/api/search-image?query=abstract%20soft%20mint%20green%20teal%20gradient%20digital%20memory%20chip%20architecture%20clean%20minimal%20background%20with%20geometric%20grid%20patterns%20representing%20RAM%20and%20cache%20systems%20modern%20technology%20visualization%20light%20pastel%20tones&width=800&height=450&seq=comp2light&orientation=landscape">
-                        <div class="comp-overlay"></div>
-                        <div class="comp-content">
-                            <h3>Memory Management</h3>
-                            <p>Advanced knowledge in virtual memory, paging, caching strategies, and memory optimization techniques</p>
-                        </div>
+                    <div class="comp-text-card border-left-secondary">
+                        <div class="icon-box-large"><i class="ri-sd-card-line"></i></div>
+                        <h3>메모리 관리 체계</h3>
+                        <p>가상 메모리, 페이징 기법 등 하드웨어 및 운영체제 수준의 메모리 관리 기법 최적화 관심</p>
                     </div>
-                    <div class="comp-card">
-                        <img alt="Performance Optimization" src="https://readdy.ai/api/search-image?query=abstract%20soft%20warm%20peach%20orange%20gradient%20speed%20performance%20visualization%20with%20dynamic%20lines%20and%20motion%20blur%20effects%20minimal%20clean%20background%20representing%20high%20performance%20computing%20and%20optimization%20modern%20tech%20design%20light%20pastel&width=800&height=450&seq=comp3light&orientation=landscape">
-                        <div class="comp-overlay"></div>
-                        <div class="comp-content">
-                            <h3>Performance Optimization</h3>
-                            <p>Profiling, benchmarking, and optimizing system-level code for maximum efficiency and throughput</p>
-                        </div>
+                    <div class="comp-text-card border-left-primary">
+                        <div class="icon-box-large"><i class="ri-dashboard-3-line"></i></div>
+                        <h3>성능 최적화 및 디버깅</h3>
+                        <p>시스템 수준의 메모리 공간 및 성능 프로파일링 도구 적용, 로우레벨 이슈 디버깅 및 분석 경험</p>
                     </div>
                 </div>
             </div>
@@ -164,147 +155,34 @@
             <div class="container">
                 <div class="projects-header">
                     <p class="section-subtitle">Selected Works</p>
-                    <h2 class="section-heading">Projects That<br><span class="italic text-accent">Push Boundaries</span></h2>
+                    <h2 class="section-heading">진행 프로젝트 및 경험</h2>
                 </div>
-                <div class="projects-grid">
-                    <div class="project-card">
-                        <div class="project-image">
-                            <img alt="Custom OS Kernel" src="https://readdy.ai/api/search-image?query=abstract%20minimal%20operating%20system%20kernel%20architecture%20diagram%20with%20soft%20pink%20pastel%20background%20clean%20geometric%20shapes%20representing%20system%20layers%20and%20modules%20modern%20technical%20illustration%20style&width=600&height=800&seq=proj1&orientation=portrait">
-                        </div>
-                        <div class="project-info">
-                            <h3>Custom OS Kernel</h3>
-                            <p>C, Assembly, x86</p>
-                        </div>
-                    </div>
-                    <div class="project-card">
-                        <div class="project-image">
-                            <img alt="Memory Allocator" src="https://readdy.ai/api/search-image?query=abstract%20minimal%20memory%20allocation%20visualization%20with%20mint%20green%20pastel%20background%20clean%20grid%20patterns%20and%20block%20structures%20representing%20heap%20management%20modern%20technical%20design&width=600&height=800&seq=proj2&orientation=portrait">
-                        </div>
-                        <div class="project-info">
-                            <h3>Memory Allocator</h3>
-                            <p>C, Linux</p>
+                
+                <h3 class="projects-category-title">🖥️ System & Low-Level</h3>
+                <div class="projects-grid-text">
+                    <div class="project-text-card">
+                        <div class="project-info-padding">
+                            <div class="project-tags"><span class="tag">C/C++</span><span class="tag">Linux</span></div>
+                            <h3>uftrace 분석 경험 (오픈소스 아카데미)</h3>
+                            <p>오픈소스 생태계 기여 과정 참여 및 시스템 레벨 분석 도구에 대한 이해도 확장. 함수 호출 트레이싱 기법 학습.</p>
                         </div>
                     </div>
-                    <div class="project-card">
-                        <div class="project-image">
-                            <img alt="Device Driver" src="https://readdy.ai/api/search-image?query=abstract%20minimal%20hardware%20device%20driver%20interface%20with%20light%20gray%20pastel%20background%20clean%20connection%20lines%20and%20circuit%20elements%20representing%20hardware%20software%20bridge%20modern%20tech%20illustration&width=600&height=800&seq=proj3&orientation=portrait">
-                        </div>
-                        <div class="project-info">
-                            <h3>Device Driver</h3>
-                            <p>C, Kernel Module</p>
-                        </div>
-                    </div>
-                    <div class="project-card">
-                        <div class="project-image">
-                            <img alt="Process Scheduler" src="https://readdy.ai/api/search-image?query=abstract%20minimal%20process%20scheduling%20algorithm%20visualization%20with%20warm%20beige%20pastel%20background%20clean%20timeline%20and%20queue%20structures%20representing%20task%20management%20modern%20technical%20design&width=600&height=800&seq=proj4&orientation=portrait">
-                        </div>
-                        <div class="project-info">
-                            <h3>Process Scheduler</h3>
-                            <p>C, Algorithm</p>
+                    <div class="project-text-card">
+                        <div class="project-info-padding">
+                            <div class="project-tags"><span class="tag">C</span><span class="tag">OS</span></div>
+                            <h3>Custom OS Kernel (계획 및 학습 중)</h3>
+                            <p>로우레벨 환경에 대한 이해도를 높이기 위한 개인 학습. 부트로더부터 커널 패닉 처리, 간단한 메모리 할당 로직을 직접 작성하며 학습.</p>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
 
-        <!-- SKILLS / RECOMMENDATIONS -->
-        <section id="skills" class="section-recommendations bg-white">
-            <div class="container">
-                <div class="flex-heading">
-                    <div class="dot"></div>
-                    <span class="section-subtitle mb-0">Recommendations</span>
-                </div>
-                <h2 class="section-heading mb-small">What Colleagues Say</h2>
-                <p class="text-desc">Feedback from team members and tech leads</p>
-                <div class="recommendations-grid">
-                    <!-- Recommendation 1 -->
-                    <div class="recommendation-card">
-                        <div class="stars">
-                            <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
-                        </div>
-                        <h3>Exceptional kernel developer</h3>
-                        <p>Outstanding work on low-level system optimization. Their deep understanding of OS internals helped us achieve 40% performance improvement.</p>
-                        <div class="recommender">
-                            <img alt="Sarah Kim" src="https://readdy.ai/api/search-image?query=professional%20asian%20female%20tech%20lead%20portrait%20headshot%20with%20clean%20neutral%20background%20confident%20smile%20business%20casual%20attire%20modern%20professional%20photography&width=96&height=96&seq=avatar1&orientation=squarish">
-                            <div>
-                                <h4>Sarah Kim</h4>
-                                <span>Tech Lead</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Recommendation 2 -->
-                    <div class="recommendation-card">
-                        <div class="stars">
-                            <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
-                        </div>
-                        <h3>Master of system programming</h3>
-                        <p>Incredible attention to detail in memory management. The custom allocator they built reduced our memory footprint significantly.</p>
-                        <div class="recommender">
-                            <img alt="Michael Chen" src="https://readdy.ai/api/search-image?query=professional%20asian%20male%20senior%20engineer%20portrait%20headshot%20with%20clean%20neutral%20background%20friendly%20expression%20business%20casual%20attire%20modern%20professional%20photography&width=96&height=96&seq=avatar2&orientation=squarish">
-                            <div>
-                                <h4>Michael Chen</h4>
-                                <span>Senior Engineer</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Recommendation 3 -->
-                    <div class="recommendation-card">
-                        <div class="stars">
-                            <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
-                        </div>
-                        <h3>Brilliant problem solver</h3>
-                        <p>Their expertise in debugging complex kernel issues is unmatched. Solved critical race conditions that had stumped our team for weeks.</p>
-                        <div class="recommender">
-                            <img alt="David Park" src="https://readdy.ai/api/search-image?query=professional%20asian%20male%20engineering%20manager%20portrait%20headshot%20with%20clean%20neutral%20background%20professional%20demeanor%20business%20attire%20modern%20professional%20photography&width=96&height=96&seq=avatar3&orientation=squarish">
-                            <div>
-                                <h4>David Park</h4>
-                                <span>Engineering Manager</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Recommendation 4 -->
-                    <div class="recommendation-card op-40">
-                        <div class="stars">
-                            <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
-                        </div>
-                        <h3>Top-tier systems architect</h3>
-                        <p>Designed and implemented a robust device driver framework that became the foundation of our entire product line.</p>
-                        <div class="recommender">
-                            <img alt="Emily Johnson" src="https://readdy.ai/api/search-image?query=professional%20caucasian%20female%20principal%20engineer%20portrait%20headshot%20with%20clean%20neutral%20background%20confident%20professional%20business%20attire%20modern%20professional%20photography&width=96&height=96&seq=avatar4&orientation=squarish">
-                            <div>
-                                <h4>Emily Johnson</h4>
-                                <span>Principal Engineer</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Recommendation 5 -->
-                    <div class="recommendation-card op-40">
-                        <div class="stars">
-                            <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
-                        </div>
-                        <h3>Exceptional code quality</h3>
-                        <p>Clean, well-documented code that follows best practices. Their contributions are always thoroughly tested and production-ready.</p>
-                        <div class="recommender">
-                            <img alt="James Lee" src="https://readdy.ai/api/search-image?query=professional%20asian%20male%20staff%20engineer%20portrait%20headshot%20with%20clean%20neutral%20background%20approachable%20smile%20business%20casual%20attire%20modern%20professional%20photography&width=96&height=96&seq=avatar5&orientation=squarish">
-                            <div>
-                                <h4>James Lee</h4>
-                                <span>Staff Engineer</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Recommendation 6 -->
-                    <div class="recommendation-card op-40">
-                        <div class="stars">
-                            <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
-                        </div>
-                        <h3>Great team collaborator</h3>
-                        <p>Not only technically brilliant but also an excellent mentor. Always willing to share knowledge and help team members grow.</p>
-                        <div class="recommender">
-                            <img alt="Lisa Wang" src="https://readdy.ai/api/search-image?query=professional%20asian%20female%20software%20architect%20portrait%20headshot%20with%20clean%20neutral%20background%20warm%20smile%20business%20professional%20attire%20modern%20professional%20photography&width=96&height=96&seq=avatar6&orientation=squarish">
-                            <div>
-                                <h4>Lisa Wang</h4>
-                                <span>Software Architect</span>
-                            </div>
+                <h3 class="projects-category-title mt-top-margin">🌐 Service & Applications</h3>
+                <div class="projects-grid-text">
+                    <div class="project-text-card">
+                        <div class="project-info-padding">
+                            <div class="project-tags"><span class="tag">Web/App</span></div>
+                            <h3>서비스 개발 프로젝트 이력</h3>
+                            <p>교내외 다양한 웹 서비스/앱 프로젝트에 참여하여 시스템 아키텍처 및 서버 개발을 수행해 왔습니다. (세부 내역 추가 예정)</p>
                         </div>
                     </div>
                 </div>
@@ -312,21 +190,15 @@
         </section>
 
         <!-- CONTACT -->
-        <section id="contact" class="section-contact">
-            <img class="contact-bg text-center" alt="Workspace" src="https://readdy.ai/api/search-image?query=bright%20modern%20office%20workspace%20with%20large%20windows%20natural%20light%20clean%20minimal%20desk%20setup%20with%20computer%20monitors%20soft%20warm%20sunlight%20streaming%20in%20professional%20tech%20environment%20light%20airy%20atmosphere%20contemporary%20interior%20design&width=1920&height=1080&seq=cta1light&orientation=landscape">
+        <section id="contact" class="section-contact bg-gradient-contact">
             <div class="contact-overlay"></div>
             <div class="contact-content container">
-                <div class="contact-title-wrapper">
-                    <h2 class="contact-title">let's build something</h2>
-                </div>
-                <div class="contact-desc-wrapper">
-                    <p class="contact-desc">Open to new opportunities in<br>system-level development</p>
-                </div>
-                <div class="contact-btn-wrapper">
-                    <button class="btn-primary">
+                <div class="contact-text-center">
+                    <p class="contact-desc">시스템 엔지니어링 및 개발 포지션에 열려있습니다.<br>관심 있으시다면 언제든 연락 부탁드립니다!</p>
+                    <a href="mailto:mose1207@gmail.com" class="btn-primary">
                         <span>Get in Touch</span>
                         <div class="btn-icon"><i class="ri-arrow-right-line"></i></div>
-                    </button>
+                    </a>
                 </div>
             </div>
         </section>
